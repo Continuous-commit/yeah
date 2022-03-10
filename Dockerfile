@@ -12,3 +12,4 @@ RUN apt-get update && apt-get install yarn
 WORKDIR /product-myrails
 COPY Gemfile Gemfile.lock /product-myrails/
 RUN bundle install
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
